@@ -34,6 +34,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/areas/editar/{id}','AreaController@edit')->name('area.edit');
     Route::resource('/areas','AreaController');
 
+    Route::get('/disciplinas/agregar/','DisciplineController@create')->name('disciplinas.create');
+    Route::get('/disciplinas/{id}','DisciplineController@show')->name('disciplinas.details');
+    Route::get('/disciplinas/editar/{id}','DisciplineController@edit')->name('disciplinas.edit');
+    Route::resource('/disciplinas','DisciplineController');
+
     Auth::routes();
 });
 

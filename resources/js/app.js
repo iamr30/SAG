@@ -22,6 +22,11 @@ Vue.component('tableareas-component', require('./components/Areas/TableComponent
 Vue.component('addareas-component', require('./components/Areas/AddComponent.vue').default);
 Vue.component('detailsareas-component', require('./components/Areas/DetailsComponent.vue').default);
 
+Vue.component('tablediscipline-component', require('./components/Discipline/TableComponent.vue').default);
+Vue.component('adddiscipline-component', require('./components/Discipline/AddComponent.vue').default);
+Vue.component('detailsdiscipline-component', require('./components/Discipline/DetailsComponent.vue').default);
+
+
 const app = new Vue({
     el: '#app',
 });
