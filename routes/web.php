@@ -21,6 +21,21 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     //Voyager::routes();
 
+    Route::get('/authuser','UserController@userAuth')->name('users.auth');
+    Route::get('/users','UserController@index')->name('users.index');
+    Route::get('/users/all','UserController@showAll')->name('users.showAll');
+    Route::get('/users/editar/{id}','UserController@edit')->name('users.edit');
+    Route::apiResource('users', 'UserController');
+    Route::get('/dashboard','DashBoardController@index')->name('dashboard.index');
+    Route::resource('/dashboard', 'DashBoardController');
+
+    Route::get('/usuarioscdu/agregar/','UsersCduController@create')->name('usuario.create');
+    Route::get('/usuarioscdu/{id}','UsersCduController@show')->name('usuario.details');
+    Route::get('/usuarioscdu/editar/{id}','UsersCduController@edit')->name('usuario.edit');
+    Route::resource('/usuarioscdu','UsersCduController');
+    Route::get('/dashboard','DashBoardController@index')->name('dashboard.index');
+    Route::resource('/dashboard', 'DashBoardController');
+
     //    Route::get('/instructors','InstrutorController@index')->name('instructors.index');
     Route::get('/instructors/all','InstructorController@showAll')->name('instructors.showAll');
     Route::get('/instructors/editar/{id}','InstructorController@edit')->name('instructors.edit');
