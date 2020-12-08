@@ -26,6 +26,10 @@ Vue.component('tablediscipline-component', require('./components/Discipline/Tabl
 Vue.component('adddiscipline-component', require('./components/Discipline/AddComponent.vue').default);
 Vue.component('detailsdiscipline-component', require('./components/Discipline/DetailsComponent.vue').default);
 
+Vue.component('levels-index', require('./components/Levels/IndexComponent.vue').default);
+Vue.component('levels-details', require('./components/Levels/DetailsComponent.vue').default);
+Vue.component('levels-create-edit', require('./components/Levels/CreateEditComponent.vue').default);
+
 
 const app = new Vue({
     el: '#app',

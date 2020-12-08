@@ -39,6 +39,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/disciplinas/editar/{id}','DisciplineController@edit')->name('disciplinas.edit');
     Route::resource('/disciplinas','DisciplineController');
 
+    Route::get('/niveles/agregar/','LevelController@create')->name('levels.create');
+    Route::get('/niveles/{id}','LevelController@show')->name('levels.details');
+    Route::get('/niveles/editar/{id}','LevelController@edit')->name('levels.edit');
+    Route::apiResource('/niveles','LevelController');
+
     Auth::routes();
 });
 
