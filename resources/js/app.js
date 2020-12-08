@@ -30,6 +30,18 @@ Vue.component('levels-index', require('./components/Levels/IndexComponent.vue').
 Vue.component('levels-details', require('./components/Levels/DetailsComponent.vue').default);
 Vue.component('levels-create-edit', require('./components/Levels/CreateEditComponent.vue').default);
 
+Vue.component('courses-index', require('./components/Courses/IndexComponent.vue').default);
+Vue.component('courses-details', require('./components/Courses/DetailsComponent.vue').default);
+Vue.component('courses-create-edit', require('./components/Courses/CreateEditComponent.vue').default);
+
+Vue.component('schedules-index', require('./components/Schedules/IndexComponent.vue').default);
+Vue.component('schedules-details', require('./components/Schedules/DetailsComponent.vue').default);
+Vue.component('schedules-create-edit', require('./components/Schedules/CreateEditComponent.vue').default);
+
+Vue.component('form-role-component', require('./components/Roles/FormRoleComponent.vue').default);
+Vue.component('role-component', require('./components/Roles/RoleComponent.vue').default);
+Vue.component('my-roles-component', require('./components/Roles/MyRolesComponent.vue').default);
+
 
 const app = new Vue({
     el: '#app',
