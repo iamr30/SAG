@@ -22,9 +22,9 @@ Route::group(['prefix' => 'admin'], function () {
     //Voyager::routes();
 
     //    Route::get('/instructors','InstrutorController@index')->name('instructors.index');
-   Route::get('/instructors/all','InstructorController@showAll')->name('instructors.showAll');
-   Route::get('/instructors/editar/{id}','InstructorController@edit')->name('instructors.edit');
-   Route::get('/instructors/schedules/{id}','InstructorController@showShedules')->name('instructors.showSchedules');
+    Route::get('/instructors/all','InstructorController@showAll')->name('instructors.showAll');
+    Route::get('/instructors/editar/{id}','InstructorController@edit')->name('instructors.edit');
+    Route::get('/instructors/schedules/{id}','InstructorController@showShedules')->name('instructors.showSchedules');
     //    Route::get('/instructors/{id}','InstructorController@show')->name('instructors.details');
     Route::get('/instructors/create','InstructorController@create')->name('instructors.create');
     Route::apiResource('instructors', 'InstructorController');
@@ -48,6 +48,16 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/cursos/{id}','CourseController@show')->name('courses.details');
     Route::get('/cursos/editar/{id}','CourseController@edit')->name('courses.edit');
     Route::apiResource('/cursos','CourseController');
+
+    Route::get('/horarios/agregar/','ScheduleController@create')->name('schedules.create');
+    Route::get('/horarios/{id}','ScheduleController@show')->name('schedules.details');
+    Route::get('/horarios/editar/{id}','ScheduleController@edit')->name('schedules.edit');
+    Route::apiResource('/horarios','ScheduleController');
+
+    Route::get('/roles','RoleController@index')->name('roles.index');
+    Route::get('/roles/all','RoleController@showAll')->name('roles.showAll');
+    Route::get('/roles/editar/{id}','UserController@update')->name('roles.update');
+    Route::apiResource('roles', 'RoleController');
 
     Auth::routes();
 });
