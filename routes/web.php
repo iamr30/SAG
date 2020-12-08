@@ -29,6 +29,26 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/instructors/create','InstructorController@create')->name('instructors.create');
     Route::apiResource('instructors', 'InstructorController');
 
+    Route::get('/areas/agregar/','AreaController@create')->name('area.create');
+    Route::get('/areas/{id}','AreaController@show')->name('area.details');
+    Route::get('/areas/editar/{id}','AreaController@edit')->name('area.edit');
+    Route::resource('/areas','AreaController');
+
+    Route::get('/disciplinas/agregar/','DisciplineController@create')->name('disciplinas.create');
+    Route::get('/disciplinas/{id}','DisciplineController@show')->name('disciplinas.details');
+    Route::get('/disciplinas/editar/{id}','DisciplineController@edit')->name('disciplinas.edit');
+    Route::resource('/disciplinas','DisciplineController');
+
+    Route::get('/niveles/agregar/','LevelController@create')->name('levels.create');
+    Route::get('/niveles/{id}','LevelController@show')->name('levels.details');
+    Route::get('/niveles/editar/{id}','LevelController@edit')->name('levels.edit');
+    Route::apiResource('/niveles','LevelController');
+
+    Route::get('/cursos/agregar/','CourseController@create')->name('courses.create');
+    Route::get('/cursos/{id}','CourseController@show')->name('courses.details');
+    Route::get('/cursos/editar/{id}','CourseController@edit')->name('courses.edit');
+    Route::apiResource('/cursos','CourseController');
+
     Auth::routes();
 });
 
