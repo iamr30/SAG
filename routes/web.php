@@ -44,6 +44,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/niveles/editar/{id}','LevelController@edit')->name('levels.edit');
     Route::apiResource('/niveles','LevelController');
 
+    Route::get('/cursos/agregar/','CourseController@create')->name('courses.create');
+    Route::get('/cursos/{id}','CourseController@show')->name('courses.details');
+    Route::get('/cursos/editar/{id}','CourseController@edit')->name('courses.edit');
+    Route::apiResource('/cursos','CourseController');
+
     Auth::routes();
 });
 
