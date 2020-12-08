@@ -29,6 +29,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/instructors/create','InstructorController@create')->name('instructors.create');
     Route::apiResource('instructors', 'InstructorController');
 
+    Route::get('/areas/agregar/','AreaController@create')->name('area.create');
+    Route::get('/areas/{id}','AreaController@show')->name('area.details');
+    Route::get('/areas/editar/{id}','AreaController@edit')->name('area.edit');
+    Route::resource('/areas','AreaController');
+
     Auth::routes();
 });
 

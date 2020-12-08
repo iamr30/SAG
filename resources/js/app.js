@@ -18,6 +18,10 @@ Vue.component('instructor-component', require('./components/Instructors/Instruct
 Vue.component('my-instructors-component', require('./components/Instructors/MyInstructorsComponent.vue').default);
 Vue.component('detail-instructor-component', require('./components/Instructors/DetailComponent').default);
 
+Vue.component('tableareas-component', require('./components/Areas/TableComponent.vue').default);
+Vue.component('addareas-component', require('./components/Areas/AddComponent.vue').default);
+Vue.component('detailsareas-component', require('./components/Areas/DetailsComponent.vue').default);
+
 const app = new Vue({
     el: '#app',
 });
