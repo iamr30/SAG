@@ -1,0 +1,35 @@
+/* td{
+    text-align: center;
+}
+th{
+    text-align: center;
+} */
+
+.table-button{
+    width: max-content;
+}
+.mousehover :hover{
+    cursor: pointer;
+}
+.form-button{
+    width: 50%;
+}
+
+.search{
+    border-style: solid;
+    border-radius: 1em;
+    border-width: 2px;
+    margin: 0em;
+    padding: 0em;
+    display: inline;
+}
+
+.date{
+    border-radius: 5%;
+    border-color: lightgray;
+    border-width: 1px;
+}
+
+.minw{
+    min-width: 15em;
+}
