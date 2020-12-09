@@ -5752,7 +5752,7 @@ a.close.disabled {
     vertical-align: text-top!important
 }
 .bg-red{
-    background-color: red;
+    background-color: var(--orange);
 }
 .bg-primary {
     background-color: #4e73df!important
