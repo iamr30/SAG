@@ -87,6 +87,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/payments/editar/{id}','PaymentController@edit')->name('payments.edit');
     Route::get('/payments/detalle/{id}','PaymentController@show')->name('payment.show');
     Route::apiResource('payments', 'PaymentController');
+
+    Route::get('/condonaciones/agregar/','CondonationController@create')->name('condonation.create');
+    Route::get('/condonaciones/{id}','CondonationController@show')->name('condonation.details');
+    Route::get('/condonaciones/editar/{id}','CondonationController@edit')->name('condonation.edit');
+    Route::resource('/condonaciones','CondonationController');
     
     Auth::routes();
 

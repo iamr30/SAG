@@ -74,6 +74,10 @@ Vue.component('my-payments-component', require('./components/Payments/MyPayments
 Vue.component('payments-create-edit', require('./components/Payments/CreateEditPaymentComponent.vue').default);
 Vue.component('detail-payment-component', require('./components/Payments/DetailPaymentComponent.vue').default);
 
+Vue.component('tablecondonation-component', require('./components/Condonations/TableComponent.vue').default);
+Vue.component('addcondonation-component', require('./components/Condonations/AddComponent.vue').default);
+Vue.component('detailscondonation-component', require('./components/Condonations/DetailsComponent.vue').default);
+
 const app = new Vue({
     el: '#app',
 });
