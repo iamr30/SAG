@@ -9731,7 +9731,7 @@ a:focus {
     }
 }
 .bg-login-image{
-    background-image: url("../images/cdu.png");
+    background-image: url("../images/logo.png");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: auto;
@@ -9743,13 +9743,13 @@ a:focus {
 }
 .bg-password-image
 {
-    background-image: url("../images/cdu.png");
+    background-image: url("../images/logo.png");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: auto;
 }
 .bg-register-image {
-    background-image: url("../images/cdu.png");
+    background-image: url("../images/logo.png");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: auto;
