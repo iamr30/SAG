@@ -68,6 +68,12 @@ Vue.component('sidebar-menu-component-guest', require('./components/Menus/SideBa
 Vue.component('attendancerecord-component', require('./components/AttendancesRecord/AttendanceRecordComponent.vue').default);
 Vue.component('my-attendancesrecord-component', require('./components/AttendancesRecord/MyAttendancesRecordComponent.vue').default);
 
+Vue.component('form-payment-component', require('./components/Payments/FormPaymentComponent.vue').default);
+Vue.component('payment-component', require('./components/Payments/PaymentComponent.vue').default);
+Vue.component('my-payments-component', require('./components/Payments/MyPaymentsComponent.vue').default);
+Vue.component('payments-create-edit', require('./components/Payments/CreateEditPaymentComponent.vue').default);
+Vue.component('detail-payment-component', require('./components/Payments/DetailPaymentComponent.vue').default);
+
 const app = new Vue({
     el: '#app',
 });
