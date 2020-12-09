@@ -81,6 +81,12 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/attendancesrecord/all','AttendanceController@showAll')->name('attendancesrecord.showAll');
     Route::get('/attendancesrecord/editar/{id}','AttendanceController@update')->name('attendancesrecord.update');
     Route::apiResource('/attendancesrecord','AttendanceController');
+
+    Route::get('/payments','PaymentController@index')->name('payments.index');
+    Route::get('/payments/all','PaymentController@showAll')->name('payments.showAll');
+    Route::get('/payments/editar/{id}','PaymentController@edit')->name('payments.edit');
+    Route::get('/payments/detalle/{id}','PaymentController@show')->name('payment.show');
+    Route::apiResource('payments', 'PaymentController');
     
     Auth::routes();
 
