@@ -76,6 +76,11 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::get('/','AdminController@index')->name('dashboard');
 
+    Route::resource('/asignar','AssignedSchedulesController');
+    Route::post('/asignar/{id}','AssignedSchedulesController@store')->name('asignar.store');;
+    Route::resource('/tarjetas','CardController');
+    Auth::routes();
+
     Auth::routes();
 });
 
