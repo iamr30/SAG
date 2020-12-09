@@ -16,12 +16,12 @@ Vue.component('users-create-edit', require('./components/Users/CreateEditUserCom
 Vue.component('table-component', require('./components/UsersCdu/TableComponent.vue').default);
 Vue.component('add-component', require('./components/UsersCdu/AddComponent.vue').default);
 Vue.component('details-component', require('./components/UsersCdu/DetailsComponent.vue').default);
-Vue.component('assignschedule-component', require('./components/UsersCdu/AssignSchedule.vue').default);
+//Vue.component('assignschedule-component', require('./components/UsersCdu/AssignSchedule.vue').default);
 Vue.component('manageuser-component', require('./components/UsersCdu/ManageUser.vue').default);
 Vue.component('paymenttable-component', require('./components/UsersCdu/PaymentsTable.vue').default);
 Vue.component('condonationtable-component', require('./components/UsersCdu/CondonationTable.vue').default);
 Vue.component('cardtable-component', require('./components/UsersCdu/CardTable.vue').default);
-Vue.component('assigned_schedules_edit-component', require('./components/Assigned/AssignedEdit.vue').default);
+//Vue.component('assigned_schedules_edit-component', require('./components/Assigned/AssignedEdit.vue').default);
 Vue.component('camera-component', require('./components/UsersCdu/Camera.vue').default);
 Vue.component('dashboard-component', require('./components/Dashboard/index.vue').default);
 Vue.component('cardinfo-component', require('./components/Dashboard/cardInf.vue').default);
@@ -59,6 +59,12 @@ Vue.component('schedules-create-edit', require('./components/Schedules/CreateEdi
 Vue.component('form-role-component', require('./components/Roles/FormRoleComponent.vue').default);
 Vue.component('role-component', require('./components/Roles/RoleComponent.vue').default);
 Vue.component('my-roles-component', require('./components/Roles/MyRolesComponent.vue').default);
+
+Vue.component('top-menu-component', require('./components/Menus/TopBarMenu.vue').default);
+Vue.component('top-menu-component-guest', require('./components/Menus/TopBarMenuGuest.vue').default);
+Vue.component('sidebar-menu-component', require('./components/Menus/SideBarMenu.vue').default);
+Vue.component('sidebar-menu-component-guest', require('./components/Menus/SideBarMenuGuest.vue').default);
+
 
 
 const app = new Vue({
