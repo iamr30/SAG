@@ -19,7 +19,6 @@ Route::get('/', function () {
 
 
 Route::group(['prefix' => 'admin'], function () {
-    //Voyager::routes();
 
     Route::get('/authuser','UserController@userAuth')->name('users.auth');
     Route::get('/users','UserController@index')->name('users.index');
@@ -36,11 +35,9 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/dashboard','DashBoardController@index')->name('dashboard.index');
     Route::resource('/dashboard', 'DashBoardController');
 
-    //    Route::get('/instructors','InstrutorController@index')->name('instructors.index');
     Route::get('/instructors/all','InstructorController@showAll')->name('instructors.showAll');
     Route::get('/instructors/editar/{id}','InstructorController@edit')->name('instructors.edit');
     Route::get('/instructors/schedules/{id}','InstructorController@showShedules')->name('instructors.showSchedules');
-    //    Route::get('/instructors/{id}','InstructorController@show')->name('instructors.details');
     Route::get('/instructors/create','InstructorController@create')->name('instructors.create');
     Route::apiResource('instructors', 'InstructorController');
 
@@ -79,6 +76,12 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('/asignar','AssignedSchedulesController');
     Route::post('/asignar/{id}','AssignedSchedulesController@store')->name('asignar.store');;
     Route::resource('/tarjetas','CardController');
+
+    Route::get('/attendancesrecord/','AttendanceController@index')->name('attendancesrecord.index');
+    Route::get('/attendancesrecord/all','AttendanceController@showAll')->name('attendancesrecord.showAll');
+    Route::get('/attendancesrecord/editar/{id}','AttendanceController@update')->name('attendancesrecord.update');
+    Route::apiResource('/attendancesrecord','AttendanceController');
+    
     Auth::routes();
 
     Auth::routes();

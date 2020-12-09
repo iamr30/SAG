@@ -65,7 +65,8 @@ Vue.component('top-menu-component-guest', require('./components/Menus/TopBarMenu
 Vue.component('sidebar-menu-component', require('./components/Menus/SideBarMenu.vue').default);
 Vue.component('sidebar-menu-component-guest', require('./components/Menus/SideBarMenuGuest.vue').default);
 
-
+Vue.component('attendancerecord-component', require('./components/AttendancesRecord/AttendanceRecordComponent.vue').default);
+Vue.component('my-attendancesrecord-component', require('./components/AttendancesRecord/MyAttendancesRecordComponent.vue').default);
 
 const app = new Vue({
     el: '#app',
