@@ -47,7 +47,7 @@
         },
         data() {
             return {
-                url: '/images/logos/logo_cdu_w.png',
+                url: '/images/logos/logo_blanco.png',
                 user: [],
                 usercdu: [],
             }

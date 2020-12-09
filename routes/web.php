@@ -59,6 +59,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/roles/editar/{id}','UserController@update')->name('roles.update');
     Route::apiResource('roles', 'RoleController');
 
+    Route::get('/','AdminController@index')->name('dashboard');
+
     Auth::routes();
 });
 
