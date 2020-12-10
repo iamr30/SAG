@@ -15,6 +15,8 @@ class UserAdmin
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        if(auth()->check() && (auth()->user()->role_id == 2 || auth()->user()->role_id == 3))
+            return redirect('/');
+        return $next($request);       
     }
 }

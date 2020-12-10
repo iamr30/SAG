@@ -150,7 +150,7 @@
                                 name="id"
                                 v-model="id"
                                 class="form-control"
-                                placeholder="Ingrese el Código del Estudiante"
+                                placeholder="Ingrese el código de miembro"
                               />
                             </div>
                           </div>
@@ -166,7 +166,7 @@
                                 name="username"
                                 v-model="username"
                                 class="form-control"
-                                placeholder="Ingrese Nombre"
+                                placeholder="Ingrese nombre"
                                 required
                               />
                             </div>
@@ -183,7 +183,7 @@
                                 name="email"
                                 v-model="email"
                                 class="form-control"
-                                placeholder="Ingrese Correo electrónico"
+                                placeholder="Ingrese correo electrónico"
                                 required
                               />
                             </div>
@@ -200,7 +200,7 @@
                                 name="phone"
                                 v-model="phone"
                                 class="form-control"
-                                placeholder="Ingrese Teléfono"
+                                placeholder="Ingrese teléfono"
                               />
                             </div>
                           </div>

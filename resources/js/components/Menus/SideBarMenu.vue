@@ -34,9 +34,8 @@
             axios.get('/admin/authuser').then((response) =>{
                 this.user = response.data;
                 if (this.user.role_id === 3){
-                    axios.get('/usuarioscdu/').then((res) =>{
+                    axios.get('/admin/usuarioscdu/').then((res) =>{
                         for (let userCDU in res.data){
-                            console.log(res.data[userCDU].user_id);
                             if(res.data[userCDU].user_id === this.user.id){
                                 this.usercdu = res.data[userCDU];
                             }

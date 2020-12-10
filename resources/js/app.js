@@ -60,11 +60,6 @@ Vue.component('form-role-component', require('./components/Roles/FormRoleCompone
 Vue.component('role-component', require('./components/Roles/RoleComponent.vue').default);
 Vue.component('my-roles-component', require('./components/Roles/MyRolesComponent.vue').default);
 
-Vue.component('top-menu-component', require('./components/Menus/TopBarMenu.vue').default);
-Vue.component('top-menu-component-guest', require('./components/Menus/TopBarMenuGuest.vue').default);
-Vue.component('sidebar-menu-component', require('./components/Menus/SideBarMenu.vue').default);
-Vue.component('sidebar-menu-component-guest', require('./components/Menus/SideBarMenuGuest.vue').default);
-
 Vue.component('attendancerecord-component', require('./components/AttendancesRecord/AttendanceRecordComponent.vue').default);
 Vue.component('my-attendancesrecord-component', require('./components/AttendancesRecord/MyAttendancesRecordComponent.vue').default);
 

@@ -17,14 +17,26 @@ Route::get('/', function () {
     return view('index');
 });
 
+/*Route::group([
+    'prefix' => 'user'   
+],function (){
+    //Route::get('/usuarioscdu/{id}','UsersCduController@show')->name('usuario.details');
+    //Route::resource('/usuarioscdu','UsersCduController');
+});*/
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group([   
+    'prefix' => 'admin',
+    //'middleware' => 'admin'
+    ], function () {
+
+    Route::get('/','AdminController@index')->name('dashboard');
 
     Route::get('/authuser','UserController@userAuth')->name('users.auth');
     Route::get('/users','UserController@index')->name('users.index');
     Route::get('/users/all','UserController@showAll')->name('users.showAll');
     Route::get('/users/editar/{id}','UserController@edit')->name('users.edit');
     Route::apiResource('users', 'UserController');
+   
     Route::get('/dashboard','DashBoardController@index')->name('dashboard.index');
     Route::resource('/dashboard', 'DashBoardController');
 
@@ -32,8 +44,6 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/usuarioscdu/{id}','UsersCduController@show')->name('usuario.details');
     Route::get('/usuarioscdu/editar/{id}','UsersCduController@edit')->name('usuario.edit');
     Route::resource('/usuarioscdu','UsersCduController');
-    Route::get('/dashboard','DashBoardController@index')->name('dashboard.index');
-    Route::resource('/dashboard', 'DashBoardController');
 
     Route::get('/instructors/all','InstructorController@showAll')->name('instructors.showAll');
     Route::get('/instructors/editar/{id}','InstructorController@edit')->name('instructors.edit');
@@ -69,9 +79,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/roles','RoleController@index')->name('roles.index');
     Route::get('/roles/all','RoleController@showAll')->name('roles.showAll');
     Route::get('/roles/editar/{id}','UserController@update')->name('roles.update');
-    Route::apiResource('roles', 'RoleController');
-
-    Route::get('/','AdminController@index')->name('dashboard');
+    Route::apiResource('roles', 'RoleController');    
 
     Route::resource('/asignar','AssignedSchedulesController');
     Route::post('/asignar/{id}','AssignedSchedulesController@store')->name('asignar.store');;
@@ -94,8 +102,6 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('/condonaciones','CondonationController');
     
     Auth::routes();
-
-    Auth::routes();
 });
 
 //Route::get('/linkstorage', function () {}
@@ -103,3 +109,5 @@ Route::group(['prefix' => 'admin'], function () {
 Route::group(['prefix' => 'root'], function () {
     Voyager::routes();
 });
+
+//Route::get('/home', 'HomeController@index')->name('home');
