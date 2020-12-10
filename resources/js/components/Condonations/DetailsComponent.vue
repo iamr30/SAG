@@ -46,7 +46,7 @@
                     />
                   </div>
                   <br />
-                  <h3>Tipo de beca</h3>
+                  <h3>Tipo de descuento</h3>
                   <div class="w-100">
                     <input
                       type="text"

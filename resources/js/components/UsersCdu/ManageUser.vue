@@ -108,12 +108,12 @@
                   :id="account.pivot.id + 'payment'"
                   target="_blank"
                   method="post"
-                  action="https://mipagoudg.udg.mx:443/PagoUdgServ/pasarela.xhtml"
+                  action="testpagomanageusercomponent"
                 >
                   <input
                     v-show="false"
                     name="evento"
-                    value="CARRERA_LEONES_NEGROS"
+                    value="-"
                   />
                   <input
                     v-show="false"
@@ -139,7 +139,7 @@
                     type="hidden"
                     name="url_retorno"
                     :value="
-                      'https://df6a2ac66913.ngrok.io/asignar/' +
+                      'testpago' +
                       account.pivot.id
                     "
                   />
@@ -385,12 +385,12 @@ export default {
             },
           },
           {
-            label: "Tipo de beca",
+            label: "Tipo de descuento",
             name: "scholar_ship",
             type: "textarea",
             value: null,
             attr: {
-              placeholder: "Ingrese el tipo de beca",
+              placeholder: "Ingrese el tipo de descuento",
               required: true,
             },
           },

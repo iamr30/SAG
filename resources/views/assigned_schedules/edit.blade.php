@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>PDF Demo in Laravel 7</title>
+  <title>Orden de pago</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <style>
     .chartData {
@@ -36,10 +36,7 @@
       <table class="col-lg-12 p-0">
         <body>
           <tr>
-            <td class="text-center w-50"><img class="img2 " src="http://www.ametriz.casdt.net/img/universidad-de-guadalajara-udg.png">
-            </td>
-            <td class="text-center"><img class="img2 "
-                src="http://udg.mx/sites/default/files/styles/tablero/public/140324_complejo_depor.jpg?itok=YHXHUhEk">
+            <td class="text-center w-50"><img class="img2 " src="./public/images/logo.png">
             </td>
           </tr>
         </body>
@@ -104,14 +101,14 @@
                 </td>
                 <td>
                   <div class=" border chartData col-sm-12 rounded border-dark text-left m-1 mb-1">
-                    <label class="text h6 small">CÓDIGO: {{$code }}</label>
+                    <label class="text h6 small">CÓDIGO DE MIEMBRO: {{$code }}</label>
                   </div>
                 </td>
               </tr>
               <tr>
                 <td class="w-50">
                   <div class="border chartData col-sm-12 rounded border-dark text-left m-1 mb-1">
-                    <label class="text h6 small">TÉLEFONO: {{$phone }}</label>
+                    <label class="text h6 small">TELÉFONO: {{$phone }}</label>
                   </div>
                 </td>
                 <td>

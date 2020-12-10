@@ -33,7 +33,7 @@
                   <th @click="sort(0)">Nombre del usuario</th>
                   <th @click="sort(1)">Nombre del curso</th>
                   <th @click="sort(2)">Porcentaje</th>
-                  <th @click="sort(3)">Tipo de beca</th>
+                  <th @click="sort(3)">Tipo de descuento</th>
                   <th @click="sort(4)">Vigencia</th>
                   <th>Acciones</th>
                 </tr>
@@ -97,7 +97,7 @@
                   <th @click="sort(0)">Nombre del usuario</th>
                   <th @click="sort(1)">Nombre del curso</th>
                   <th @click="sort(2)">Porcentaje</th>
-                  <th @click="sort(3)">Tipo de beca</th>
+                  <th @click="sort(3)">Tipo de descuento</th>
                   <th @click="sort(4)">Vigencia</th>
                   <th>Acciones</th>
                 </tr>

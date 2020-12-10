@@ -15,7 +15,7 @@
           <tr class="text-center">
             <th @click="sortC(-1)">Id Curso</th>
             <th @click="sortC(0)">Curso</th>
-            <th @click="sortC(1)">Tipo de beca</th>
+            <th @click="sortC(1)">Tipo de descuento</th>
             <th @click="sortC(2)">Porcentaje</th>
             <th @click="sortC(3)">Vigencia</th>
             <th>Acciones</th>
@@ -50,7 +50,7 @@
           <tr class="text-center">
             <th @click="sortC(-1)">Id Curso</th>
             <th @click="sortC(0)">Curso</th>
-            <th @click="sortC(1)">Tipo de beca</th>
+            <th @click="sortC(1)">Tipo de descuento</th>
             <th @click="sortC(2)">Porcentaje</th>
             <th @click="sortC(3)">Vigencia</th>
             <th>Acciones</th>
