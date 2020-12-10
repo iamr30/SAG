@@ -22,7 +22,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property bool $edit
  * @property bool $add
  * @property bool $delete
- * @property string|null $details
+ * @property string $details
  * @property int $order
  * 
  * @property DataType $data_type

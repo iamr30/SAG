@@ -13,17 +13,17 @@ use Illuminate\Database\Eloquent\Model;
  * Class Payment
  * 
  * @property int $id
- * @property int|null $id_userCDU
- * @property string|null $reference
- * @property string|null $comments
- * @property Carbon|null $expiration_date
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
+ * @property int $id_userCDU
+ * @property string $reference
+ * @property string $comments
+ * @property Carbon $expiration_date
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  * @property float $amount
  * @property int $id_assigned
  * 
  * @property AssignedSchedule $assigned_schedule
- * @property UsersCdu|null $users_cdu
+ * @property UsersCdu $users_cdu
  *
  * @package App\Models
  */

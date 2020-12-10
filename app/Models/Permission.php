@@ -15,9 +15,9 @@ use Illuminate\Database\Eloquent\Model;
  * 
  * @property int $id
  * @property string $key
- * @property string|null $table_name
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
+ * @property string $table_name
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  * 
  * @property Collection|Role[] $roles
  *

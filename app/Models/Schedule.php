@@ -6,26 +6,24 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Schedule
  * 
  * @property int $id
- * @property int|null $id_course
- * @property int|null $id_instructor
- * @property string|null $m
- * @property string|null $t
- * @property string|null $w
- * @property string|null $r
- * @property string|null $f
- * @property string|null $s
- * @property int|null $capacity
+ * @property int $id_course
+ * @property int $id_instructor
+ * @property string $m
+ * @property string $t
+ * @property string $w
+ * @property string $r
+ * @property string $f
+ * @property string $s
+ * @property int $capacity
  * 
- * @property Course|null $course
- * @property Instructor|null $instructor
- * @property Collection|AssignedSchedule[] $assigned_schedules
+ * @property Course $course
+ * @property Instructor $instructor
  *
  * @package App\Models
  */
@@ -64,6 +62,6 @@ class Schedule extends Model
 
 	public function assigned_schedules()
 	{
-		return $this->hasMany(AssignedSchedule::class, 'id_schedules');
+		return $this->hasMany(AssignedSchedules::class, 'id_schedules');
 	}
 }

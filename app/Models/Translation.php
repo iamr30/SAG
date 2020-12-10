@@ -18,8 +18,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $foreign_key
  * @property string $locale
  * @property string $value
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  *
  * @package App\Models
  */

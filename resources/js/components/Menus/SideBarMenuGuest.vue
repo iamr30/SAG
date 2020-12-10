@@ -111,7 +111,7 @@
             </div>
             <hr class="sidebar-divider my-0">
             <ul class="nav navbar-nav text-light" id="accordionSidebar">
-                <li class="nav-item"><a class="nav-link active" href="/admin/login"><i class="fas fa-address-card"></i><span>Iniciar Sesión</span></a></li>
+                <li class="nav-item"><a class="nav-link active" href="/login"><i class="fas fa-address-card"></i><span>Iniciar Sesión</span></a></li>
             </ul>
             <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
         </div>

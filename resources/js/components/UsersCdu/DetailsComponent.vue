@@ -206,7 +206,7 @@ export default {
       window.location = "/admin/usuarioscdu/";
     },
     updateData() {
-      axios.get(`/admin/usuarioscdu/${this.detailsid}`).then((response) => {
+      axios.get(`/user/usuarioscdu/${this.detailsid}`).then((response) => {
         this.response = response.data;
         this.showId = response.data.user;
         this.$refs.cardtable.response = this.response;

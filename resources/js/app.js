@@ -73,6 +73,12 @@ Vue.component('tablecondonation-component', require('./components/Condonations/T
 Vue.component('addcondonation-component', require('./components/Condonations/AddComponent.vue').default);
 Vue.component('detailscondonation-component', require('./components/Condonations/DetailsComponent.vue').default);
 
+Vue.component('form-concept-component', require('./components/Concepts/FormConceptComponent.vue').default);
+Vue.component('concept-component', require('./components/Concepts/ConceptComponent.vue').default);
+Vue.component('my-concepts-component', require('./components/Concepts/MyConceptsComponent.vue').default);
+Vue.component('concepts-create-edit', require('./components/Concepts/CreateEditConceptComponent.vue').default);
+Vue.component('detail-concept-component', require('./components/Concepts/DetailConceptComponent.vue').default);
+
 const app = new Vue({
     el: '#app',
 });

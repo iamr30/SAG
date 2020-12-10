@@ -270,8 +270,23 @@ class UsersCduController extends Controller {
      */
     public function show(int $id,Request $request) {
         
-        if (\Request:: ajax()) {
-            
+        $role = Auth::user()->role_id;
+        $idUser = Auth::user()->id;        
+
+        if($role == 3)
+        {
+            $idCdu = UsersCdu::select("id")
+                ->where("user_id", "=", $idUser)->first();
+            if($idCdu->id != $id){
+                $detailId = $idCdu->id;
+                $params = [
+                'detailN' => $detailId
+            ];
+                return view('usercdu/usersDetails', $params);
+            }  
+        }
+
+        if (\Request:: ajax()) {           
             try {
                 $this -> updateCost($id);
                 return  $this -> updateCost($id);
