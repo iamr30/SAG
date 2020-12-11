@@ -36,7 +36,7 @@
       <table class="col-lg-12 p-0">
         <body>
           <tr>
-            <td class="text-center w-50"><img class="img2 " src="./public/images/logo.png">
+            <td class="text-center w-50"><img class="img2 " src="..\storage\app\public\logo.png">
             </td>
           </tr>
         </body>

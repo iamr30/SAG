@@ -108,7 +108,7 @@
                   :id="account.pivot.id + 'payment'"
                   target="_blank"
                   method="post"
-                  action="testpagomanageusercomponent"
+                  action="paymentPost"
                 >
                   <input
                     v-show="false"
