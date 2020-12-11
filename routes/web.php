@@ -21,7 +21,7 @@ Route::get('/authuser','UserController@userAuth')->name('users.auth');
 Auth::routes();
 
 Route::group([
-    'prefix' => 'user'   
+    'prefix' => 'user'
 ],function (){
     Route::get('/usuarioscdu/{id}','UsersCduController@show')->name('usuario.details');
     Route::resource('/usuarioscdu','UsersCduController');  
@@ -103,17 +103,9 @@ Route::group([
     Route::get('/condonaciones/editar/{id}','CondonationController@edit')->name('condonation.edit');
     Route::resource('/condonaciones','CondonationController');
 
-//    Route::get('/concepts','ConceptController@index')->name('concepts.index');
-//    Route::get('/concepts/all','ConceptController@showAll')->name('concepts.showAll');
-//    Route::get('/concepts/editar/{id}','ConceptController@edit')->name('concepts.edit');
-//    Route::get('/concepts/detalle/{id}','ConceptController@show')->name('concepts.show');
-//    Route::apiResource('concepts', 'ConceptController');   
 });
 
-//Route::get('/linkstorage', function () {}
-//Run rm public/storage and php artisan storage:link for get access to storage
 Route::group(['prefix' => 'root'], function () {
     Voyager::routes();
 });
 
-//Route::get('/home', 'HomeController@index')->name('home');
