@@ -13,12 +13,12 @@ use Illuminate\Database\Eloquent\Model;
  * Class AttendancesRecord
  * 
  * @property int $id
- * @property int|null $id_userscdu
- * @property Carbon|null $date
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
+ * @property int $id_userscdu
+ * @property Carbon $date
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  * 
- * @property UsersCdu|null $users_cdu
+ * @property UsersCdu $users_cdu
  *
  * @package App\Models
  */

@@ -18,16 +18,16 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $slug
  * @property string $display_name_singular
  * @property string $display_name_plural
- * @property string|null $icon
- * @property string|null $model_name
- * @property string|null $policy_name
- * @property string|null $controller
- * @property string|null $description
+ * @property string $icon
+ * @property string $model_name
+ * @property string $policy_name
+ * @property string $controller
+ * @property string $description
  * @property bool $generate_permissions
  * @property int $server_side
- * @property string|null $details
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
+ * @property string $details
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  * 
  * @property Collection|DataRow[] $data_rows
  *

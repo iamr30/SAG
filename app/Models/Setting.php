@@ -14,11 +14,11 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id
  * @property string $key
  * @property string $display_name
- * @property string|null $value
- * @property string|null $details
+ * @property string $value
+ * @property string $details
  * @property string $type
  * @property int $order
- * @property string|null $group
+ * @property string $group
  *
  * @package App\Models
  */

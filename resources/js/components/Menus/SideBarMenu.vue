@@ -18,7 +18,7 @@
                 <li v-if="user.role_id !== 3" class="nav-item"><a class="nav-link" href="/admin/instructors"><i class="fas fa-user-ninja"></i><span>Instructores</span></a></li>
                 <li v-if="user.role_id !== 3" class="nav-item"><a class="nav-link" href="/admin/areas"><i class="fas fa-building"></i><span>Areas</span></a></li>
                 <li v-if="user.role_id !== 3" class="nav-item"><a class="nav-link" href="/admin/payments"><i class="fas fa-money-bill-wave"></i><span>Pagos</span></a></li>
-                <li v-else class="nav-item"><a class="nav-link" :href="'/admin/usuarioscdu/' + this.usercdu.id"><i class="fas fa-chart-line"></i><span>Mi cuenta</span></a></li>
+                <li v-else class="nav-item"><a class="nav-link" :href="'/user/usuarioscdu/' + this.usercdu.id"><i class="fas fa-chart-line"></i><span>Mi cuenta</span></a></li>
             </ul>
             <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
         </div>
@@ -31,12 +31,11 @@
         name: "SideBarMenu",
         created() {
             let userscdu;
-            axios.get('/admin/authuser').then((response) =>{
+            axios.get('/authuser').then((response) =>{
                 this.user = response.data;
                 if (this.user.role_id === 3){
-                    axios.get('/usuarioscdu/').then((res) =>{
+                    axios.get('/user/usuarioscdu/').then((res) =>{
                         for (let userCDU in res.data){
-                            console.log(res.data[userCDU].user_id);
                             if(res.data[userCDU].user_id === this.user.id){
                                 this.usercdu = res.data[userCDU];
                             }
@@ -47,7 +46,7 @@
         },
         data() {
             return {
-                url: '/images/logos/logo_cdu_w.png',
+                url: '/images/logos/logo_blanco.png',
                 user: [],
                 usercdu: [],
             }

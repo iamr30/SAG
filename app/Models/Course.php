@@ -14,16 +14,15 @@ use Illuminate\Database\Eloquent\Model;
  * Class Course
  * 
  * @property int $id
- * @property string|null $name
- * @property int|null $id_discipline
- * @property int|null $id_level
- * @property Carbon|null $date_start
- * @property Carbon|null $date_end
- * @property int|null $cost
- * @property string|null $reference
+ * @property string $name
+ * @property int $id_discipline
+ * @property int $id_level
+ * @property Carbon $date_start
+ * @property Carbon $date_end
+ * @property int $cost
  * 
- * @property Discipline|null $discipline
- * @property Level|null $level
+ * @property Discipline $discipline
+ * @property Level $level
  * @property Collection|Schedule[] $schedules
  *
  * @package App\Models
@@ -36,7 +35,7 @@ class Course extends Model
 	protected $casts = [
 		'id_discipline' => 'int',
 		'id_level' => 'int',
-		'cost' => 'int'
+		'cost' => 'float'
 	];
 
 	protected $dates = [

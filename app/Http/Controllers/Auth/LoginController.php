@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Models\UsersCdu;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -25,7 +28,29 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    //protected $redirectTo = RouteServiceProvider::ADMIN;
+
+    public function redirectTo() {
+        $role = Auth::user()->role_id;
+        $id = Auth::user()->id;
+        $idCdu = UsersCdu::select("id")
+        ->where("user_id", "=", $id)->first();       
+
+        //dd($idCdu->id);
+
+        switch ($role) {
+          case 1:
+          case 2:
+            return '/admin/dashboard';
+            break;
+          case 3:
+            return '/user/usuarioscdu/' . $idCdu->id;
+            break;  
+          default:
+            return '/'; 
+          break;
+        }
+      }
 
     /**
      * Create a new controller instance.

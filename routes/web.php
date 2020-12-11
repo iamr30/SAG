@@ -17,15 +17,39 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/authuser','UserController@userAuth')->name('users.auth');
+Auth::routes();
 
-Route::group(['prefix' => 'admin'], function () {
-    //Voyager::routes();
+Route::group([
+    'prefix' => 'user'
+],function (){
+    Route::get('/usuarioscdu/{id}','UsersCduController@show')->name('usuario.details');
+    Route::resource('/usuarioscdu','UsersCduController');  
+});
 
-    //    Route::get('/instructors','InstrutorController@index')->name('instructors.index');
-   Route::get('/instructors/all','InstructorController@showAll')->name('instructors.showAll');
-   Route::get('/instructors/editar/{id}','InstructorController@edit')->name('instructors.edit');
-   Route::get('/instructors/schedules/{id}','InstructorController@showShedules')->name('instructors.showSchedules');
-    //    Route::get('/instructors/{id}','InstructorController@show')->name('instructors.details');
+Route::group([   
+    'prefix' => 'admin',
+    'middleware' => 'admin'
+    ], function () {
+
+    Route::get('/','AdminController@index')->name('dashboard');
+    
+    Route::get('/users','UserController@index')->name('users.index');
+    Route::get('/users/all','UserController@showAll')->name('users.showAll');
+    Route::get('/users/editar/{id}','UserController@edit')->name('users.edit');
+    Route::apiResource('users', 'UserController');
+   
+    Route::get('/dashboard','DashBoardController@index')->name('dashboard.index');
+    Route::resource('/dashboard', 'DashBoardController');
+
+    Route::get('/usuarioscdu/agregar/','UsersCduController@create')->name('usuario.create');
+    Route::get('/usuarioscdu/{id}','UsersCduController@show')->name('usuario.details');
+    Route::get('/usuarioscdu/editar/{id}','UsersCduController@edit')->name('usuario.edit');
+    Route::resource('/usuarioscdu','UsersCduController');
+
+    Route::get('/instructors/all','InstructorController@showAll')->name('instructors.showAll');
+    Route::get('/instructors/editar/{id}','InstructorController@edit')->name('instructors.edit');
+    Route::get('/instructors/schedules/{id}','InstructorController@showShedules')->name('instructors.showSchedules');
     Route::get('/instructors/create','InstructorController@create')->name('instructors.create');
     Route::apiResource('instructors', 'InstructorController');
 
@@ -49,11 +73,39 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/cursos/editar/{id}','CourseController@edit')->name('courses.edit');
     Route::apiResource('/cursos','CourseController');
 
-    Auth::routes();
+    Route::get('/horarios/agregar/','ScheduleController@create')->name('schedules.create');
+    Route::get('/horarios/{id}','ScheduleController@show')->name('schedules.details');
+    Route::get('/horarios/editar/{id}','ScheduleController@edit')->name('schedules.edit');
+    Route::apiResource('/horarios','ScheduleController');
+
+    Route::get('/roles','RoleController@index')->name('roles.index');
+    Route::get('/roles/all','RoleController@showAll')->name('roles.showAll');
+    Route::get('/roles/editar/{id}','UserController@update')->name('roles.update');
+    Route::apiResource('roles', 'RoleController');    
+
+    Route::resource('/asignar','AssignedSchedulesController');
+    Route::post('/asignar/{id}','AssignedSchedulesController@store')->name('asignar.store');;
+    Route::resource('/tarjetas','CardController');
+
+    Route::get('/attendancesrecord/','AttendanceController@index')->name('attendancesrecord.index');
+    Route::get('/attendancesrecord/all','AttendanceController@showAll')->name('attendancesrecord.showAll');
+    Route::get('/attendancesrecord/editar/{id}','AttendanceController@update')->name('attendancesrecord.update');
+    Route::apiResource('/attendancesrecord','AttendanceController');
+
+    Route::get('/payments','PaymentController@index')->name('payments.index');
+    Route::get('/payments/all','PaymentController@showAll')->name('payments.showAll');
+    Route::get('/payments/editar/{id}','PaymentController@edit')->name('payments.edit');
+    Route::get('/payments/detalle/{id}','PaymentController@show')->name('payment.show');
+    Route::apiResource('payments', 'PaymentController');
+
+    Route::get('/condonaciones/agregar/','CondonationController@create')->name('condonation.create');
+    Route::get('/condonaciones/{id}','CondonationController@show')->name('condonation.details');
+    Route::get('/condonaciones/editar/{id}','CondonationController@edit')->name('condonation.edit');
+    Route::resource('/condonaciones','CondonationController');
+
 });
 
-//Route::get('/linkstorage', function () {}
-//Run rm public/storage and php artisan storage:link for get access to storage
 Route::group(['prefix' => 'root'], function () {
     Voyager::routes();
 });
+

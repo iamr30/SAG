@@ -13,50 +13,41 @@ use Illuminate\Database\Eloquent\Model;
  * Class Condonation
  * 
  * @property int $id
- * @property int|null $id_assigned
- * @property int|null $user_id
- * @property string|null $comments
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property Carbon|null $expiration_date
- * @property float|null $percentage
- * @property string|null $scholarship_type
+ * @property int $id_userCDU
+ * @property string $comments
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  * 
- * @property AssignedSchedule|null $assigned_schedule
- * @property User|null $user
+ * @property UsersCdu $users_cdu
  *
  * @package App\Models
  */
 class Condonation extends Model
 {
 	protected $table = 'condonations';
+	public $incrementing = false;
+	public $timestamps = true;
 
 	protected $casts = [
-		'id_assigned' => 'int',
-		'user_id' => 'int',
-		'percentage' => 'float'
+		'id' => 'int'
 	];
-
 	protected $dates = [
-		'expiration_date'
+		'created_at',
+		'updated_at'
 	];
-
 	protected $fillable = [
+		'comments',
+		'expiration_date',
 		'id_assigned',
-		'user_id',
 		'comments',
 		'expiration_date',
 		'percentage',
 		'scholarship_type'
+
 	];
 
-	public function assigned_schedule()
+	public function assigned_schedules()
 	{
-		return $this->belongsTo(AssignedSchedule::class, 'id_assigned');
-	}
-
-	public function user()
-	{
-		return $this->belongsTo(User::class);
+		return $this->belongsTo(AssignedSchedules::class, 'id_assigned');
 	}
 }

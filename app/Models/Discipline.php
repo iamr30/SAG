@@ -13,10 +13,10 @@ use Illuminate\Database\Eloquent\Model;
  * Class Discipline
  * 
  * @property int $id
- * @property string|null $name
- * @property int|null $id_area
+ * @property string $name
+ * @property int $id_area
  * 
- * @property Area|null $area
+ * @property Area $area
  * @property Collection|Course[] $courses
  * @property Collection|Level[] $levels
  *

@@ -14,11 +14,11 @@ use Illuminate\Database\Eloquent\Model;
  * Class Instructor
  * 
  * @property int $id
- * @property string|null $name
- * @property string|null $mail
- * @property string|null $phone
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
+ * @property string $name
+ * @property string $mail
+ * @property string $phone
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  * 
  * @property Collection|Schedule[] $schedules
  *

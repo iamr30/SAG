@@ -101,13 +101,13 @@ export default {
         }
     },
     mounted() {
-        axios.get('/admin/authuser').then((response) =>{
+        axios.get('/authuser').then((response) =>{
             this.user = response.data;
         });
     },
     methods: {
         logout() {
-            axios.post('/admin/logout').then(response => {
+            axios.post('/logout').then(response => {
                 window.location.href="/";
 
             }).catch(error => {

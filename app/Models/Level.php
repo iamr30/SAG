@@ -13,10 +13,10 @@ use Illuminate\Database\Eloquent\Model;
  * Class Level
  * 
  * @property int $id
- * @property string|null $name
- * @property int|null $id_discipline
+ * @property string $name
+ * @property int $id_discipline
  * 
- * @property Discipline|null $discipline
+ * @property Discipline $discipline
  * @property Collection|Course[] $courses
  *
  * @package App\Models

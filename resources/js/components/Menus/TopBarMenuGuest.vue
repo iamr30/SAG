@@ -105,7 +105,7 @@ export default {
     },
     methods: {
         logout() {
-            axios.post('/admin/logout').then(response => {
+            axios.post('/logout').then(response => {
                 window.location.href="/";
 
             }).catch(error => {

@@ -13,13 +13,13 @@ use Illuminate\Database\Eloquent\Model;
  * Class Concept
  * 
  * @property int $id
- * @property string|null $concept
- * @property string|null $reference
- * @property string|null $agreement
- * @property float|null $cost
- * @property string|null $clabe
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
+ * @property string $concept
+ * @property string $reference
+ * @property string $agreement
+ * @property float $cost
+ * @property string $clabe
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  *
  * @package App\Models
  */

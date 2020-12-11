@@ -5752,7 +5752,7 @@ a.close.disabled {
     vertical-align: text-top!important
 }
 .bg-red{
-    background-color: red;
+    background-color: var(--orange);
 }
 .bg-primary {
     background-color: #4e73df!important
@@ -9731,7 +9731,7 @@ a:focus {
     }
 }
 .bg-login-image{
-    background-image: url("../images/cdu.png");
+    background-image: url("../images/logo.png");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: auto;
@@ -9743,13 +9743,13 @@ a:focus {
 }
 .bg-password-image
 {
-    background-image: url("../images/cdu.png");
+    background-image: url("../images/logo.png");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: auto;
 }
 .bg-register-image {
-    background-image: url("../images/cdu.png");
+    background-image: url("../images/logo.png");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: auto;

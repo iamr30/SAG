@@ -12,27 +12,25 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class User
- * 
+ *
  * @property int $id
- * @property int|null $role_id
+ * @property int $role_id
  * @property string $name
  * @property string $email
- * @property string|null $avatar
- * @property Carbon|null $email_verified_at
+ * @property string $avatar
+ * @property Carbon $email_verified_at
  * @property string $password
- * @property string|null $remember_token
- * @property string|null $settings
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * 
- * @property Role|null $role
- * @property Collection|Condonation[] $condonations
+ * @property string $remember_token
+ * @property string $settings
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ *
+ * @property Role $role
  * @property Collection|Role[] $roles
- * @property Collection|UsersCdu[] $users_cdus
  *
  * @package App\Models
  */
-class User extends Model
+class User extends \TCG\Voyager\Models\User
 {
 	protected $table = 'users';
 
@@ -60,23 +58,13 @@ class User extends Model
 		'settings'
 	];
 
-	public function role()
+    public function role()
 	{
 		return $this->belongsTo(Role::class);
-	}
-
-	public function condonations()
-	{
-		return $this->hasMany(Condonation::class);
 	}
 
 	public function roles()
 	{
 		return $this->belongsToMany(Role::class, 'user_roles');
-	}
-
-	public function users_cdus()
-	{
-		return $this->hasMany(UsersCdu::class);
 	}
 }

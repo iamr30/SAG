@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * 
  * @property string $email
  * @property string $token
- * @property Carbon|null $created_at
+ * @property Carbon $created_at
  *
  * @package App\Models
  */

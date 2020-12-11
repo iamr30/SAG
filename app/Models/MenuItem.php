@@ -13,20 +13,20 @@ use Illuminate\Database\Eloquent\Model;
  * Class MenuItem
  * 
  * @property int $id
- * @property int|null $menu_id
+ * @property int $menu_id
  * @property string $title
  * @property string $url
  * @property string $target
- * @property string|null $icon_class
- * @property string|null $color
- * @property int|null $parent_id
+ * @property string $icon_class
+ * @property string $color
+ * @property int $parent_id
  * @property int $order
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $route
- * @property string|null $parameters
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ * @property string $route
+ * @property string $parameters
  * 
- * @property Menu|null $menu
+ * @property Menu $menu
  *
  * @package App\Models
  */

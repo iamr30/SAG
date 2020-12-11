@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * Class Area
  * 
  * @property int $id
- * @property string|null $name
+ * @property string $name
  * 
  * @property Collection|Discipline[] $disciplines
  *
