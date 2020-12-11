@@ -23,7 +23,7 @@ class CreateAttendancesRecordTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-            $table->bigInteger('id_userscdu')->nullable()->default(null);
+            $table->unsignedBigInteger('id_userscdu')->nullable()->default(null);
             $table->timestamp('date')->nullable()->default(null);
 
             $table->index(["id_userscdu"], 'users_cdu');

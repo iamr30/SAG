@@ -23,7 +23,7 @@ class CreatePaymentsTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-            $table->bigInteger('id_userCDU')->nullable()->default(null);
+            $table->unsignedBigInteger('id_userCDU')->nullable()->default(null);
             $table->string('reference')->nullable()->default(null);
             $table->string('comments')->nullable()->default(null);
             $table->dateTime('expiration_date')->nullable()->default(null);
@@ -36,12 +36,12 @@ class CreatePaymentsTable extends Migration
             $table->nullableTimestamps();
 
 
-            $table->foreign('id_assigned', 'id_assigned')
+            $table->foreign('id_assigned', 'id_assigned-')
                 ->references('id')->on('assigned_schedules')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->foreign('id_userCDU', 'id_userCDU')
+            $table->foreign('id_userCDU', 'id_userCDU-')
                 ->references('id')->on('users_cdu')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');

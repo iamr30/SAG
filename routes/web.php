@@ -105,7 +105,7 @@ Route::group([
 
 });
 
-Route::group(['prefix' => 'root'], function () {
-    Voyager::routes();
-});
+//Route::group(['prefix' => 'root'], function () {
+ //   Voyager::routes();
+//});
 

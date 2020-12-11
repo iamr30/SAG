@@ -23,7 +23,7 @@ class CreateAssignedSchedulesTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-            $table->bigInteger('id_userCDU')->nullable()->default(null);
+            $table->unsignedBigInteger('id_userCDU')->nullable()->default(null);
             $table->unsignedBigInteger('id_schedules')->nullable()->default(null);
             $table->timestamp('expiration_date')->nullable()->default(null);
             $table->float('amount')->nullable()->default('1');
@@ -34,7 +34,7 @@ class CreateAssignedSchedulesTable extends Migration
             $table->nullableTimestamps();
 
 
-            $table->foreign('id_userCDU', 'id_userCDU')
+            $table->foreign('id_userCDU', 'id_userCDU_schedules')
                 ->references('id')->on('users_cdu')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
