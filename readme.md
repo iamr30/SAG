@@ -10,6 +10,21 @@
 <li> Oscar Lopez </li>
 <li> Luis Cortes </li>
 </ul>
+<p>Pasos:
+<ul>
+<li> Crear una base de datos 'utf8_general_ci' y agregar el nombre en 'DB_DATABASE' de preferencia se puede llamar sag  </li>
+<li> composer update </li>
+<li> php artisan migrate </li>
+<li> php artisan voyager:install --with-dummy </li>
+<li> npm install </li>
+<li> rm public/storage </li>
+<li> php artisan storage:link  </li>
+<li> npm install vue-eagle-modal </li>
+<li> php artisan key:generate </li>
+<li> php artisan config:cache </li>
+<li> npm run dev </li>
+<li> php artisan serve </li>
+</ul>
 <p> Para utilizar una base de datos con informacion "predeterminada" se recomienda el comando "mysql -u root -p sag < sag-sys_backup.sql", primero se debe de crear la bd sag y en seguida ya dentro de la carpeta del proyecto se corre ese comando.</p>
 <p> Para el acceso a voyager, es necesario hacer login con un usuario de rol 1 (super admin) y acceder a cualquier ruta /root o irse a la esquina superior derecha y dar click en el usuario y despues en perfil. </p>
 <p> El sistema en general no esta terminado para el uso del centro deportivo en el cual se esta proyectando usar a inicios del siguiente año, por lo cual puede a ver algunos modelos que no tengan implementacion, nos comio el tiempo :(, saludos.</p>

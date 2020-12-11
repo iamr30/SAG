@@ -36,12 +36,12 @@ class CreateCondonationsTable extends Migration
             $table->nullableTimestamps();
 
 
-            $table->foreign('id_assigned', 'id_assigned')
+            $table->foreign('id_assigned', 'id_assigned_')
                 ->references('id')->on('assigned_schedules')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
 
-            $table->foreign('user_id', 'user_id_index')
+            $table->foreign('user_id', 'user_id_index_')
                 ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('restrict');

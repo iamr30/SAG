@@ -36,7 +36,7 @@ class CreateCoursesTable extends Migration
             $table->index(["id_discipline"], 'id_discipline');
 
 
-            $table->foreign('id_discipline', 'id_discipline')
+            $table->foreign('id_discipline', 'id_disciplines_courses')
                 ->references('id')->on('disciplines')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');

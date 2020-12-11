@@ -24,7 +24,7 @@ class CreateCardsTable extends Migration
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->string('id_card', 100)->nullable()->default(null);
-            $table->bigInteger('id_userCDU')->nullable()->default(null);
+            $table->unsignedBigInteger('id_userCDU')->nullable()->default(null);
 
             $table->index(["id_userCDU"], 'id_userCDU');
             $table->nullableTimestamps();
