@@ -1,5 +1,0 @@
-@extends('layouts.master')
-
-@section('content')
-    <concepts-create-edit v-bind:concept="{{$concept}}"></concepts-create-edit>
-@endsection
