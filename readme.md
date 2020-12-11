@@ -1,9 +1,9 @@
-<h1> Proyecto final Programacion por internet </h1>
+<h1> Proyecto final Programacion para internet </h1>
 <h2> Sistema administrativo gimnasio (actualizado centro deportivo) - SAG </h2>
 <p> Sistema administrativo de usuarios de diferentes niveles para la organizacion de estos, asi como cursos, instructores y pagos del centro deportivo.
     Ademas de contar con una landing page de donde se podra acceder como usuarioCDU (usuario de mas bajo nivel en el organigrama - usuario cliente, este solo puede ver su detalle), como usuario administrador con la capacidad de ver y administrar usuariosCDU, instructores, areas, cursos, horarios, disciplinas, niveles y pagos, ademas de un dashboard que da un 
     resumen administrativo sobre todas las tablas mencionadas, al final se cuenta con el usuario de mas alto nivel que es capaz de entrar al sistema voyager aplicado para la seguridad y administracion del sistema completo. </p>
-<p> Como extras se incluye la capcidad de tomar y guardar las imagenes de un usuario nuevo (conectandose a la camara del ordenador o subiendo un archivo png o jpg), ademas de la descarga de ordenes de pago (en formato pdf), tambien tomando como login externo Vayager e incluso cuenta con la capacidad de restablecer contraseña mediante correo. </p>
+<p> Como extras se incluye la capacidad de tomar y guardar las imagenes de un usuario nuevo (conectandose a la camara del ordenador o subiendo un archivo png o jpg), ademas de la descarga de ordenes de pago (en formato pdf), tambien tomando como login externo Vayager e incluso cuenta con la capacidad de restablecer contraseña mediante correo. </p>
 <p><b> integrantes: </b></p>
 <ul>
 <li> Isaac Marquez </li>
