@@ -13,8 +13,8 @@
 <p>Pasos:
 <ul>
 <li> Crear una base de datos 'utf8_general_ci' y agregar el nombre en 'DB_DATABASE' de preferencia se puede llamar sag  </li>
-<li> php artisan migrate </li>
 <li> composer update </li>
+<li> php artisan migrate </li>
 <li> php artisan voyager:install --with-dummy </li>
 <li> npm install </li>
 <li> rm public/storage </li>
